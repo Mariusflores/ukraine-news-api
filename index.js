@@ -106,6 +106,6 @@ app.get('/news/:newspaperId', (req, res) => {
         }).catch(err => console.log(err))
 })
 
-app.listen(process.env.PORT || port, () => {
-    console.log("server started on http://localhost:" + port)
+const server = app.listen(process.env.PORT || port, () => {
+    console.log("server started on http://localhost:" + server.address().port)
 })
