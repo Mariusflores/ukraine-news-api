@@ -1,4 +1,4 @@
-const port = process.env.PORT || 3000;
+const port =  3000;
 const express = require('express')
 const axios = require('axios')
 const cheerio = require('cheerio')
@@ -106,6 +106,6 @@ app.get('/news/:newspaperId', (req, res) => {
         }).catch(err => console.log(err))
 })
 
-app.listen(port, () => {
+app.listen(process.env.PORT || port, () => {
     console.log("server started on http://localhost:" + port)
 })
